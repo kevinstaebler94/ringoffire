@@ -1,0 +1,40 @@
+@use "./../../styles/mixins.scss";
+
+.start-screen {
+  height: 100vh;
+  width: 100%;
+  background-color: #404040;
+  .start-card {
+    height: 100vh;
+    width: 30%;
+    background: linear-gradient(to bottom, #860a0a, #d32a2a, #860a0a);
+    margin: 0 auto;
+    border: 10px solid goldenrod;
+    @include mixins.flexCenter($jc: center, $ac: center, $gap: 0, $fd: column);
+  }
+  p {
+    color: whitesmoke;
+    font-size: 7rem;
+    &:nth-child(even) {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+.start-label-box {
+  margin: 10em auto 0;
+  background-color: rgb(250, 190, 40);
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 75%;
+  height: 100px;
+  @include mixins.flexCenter($jc: center, $ac: center);
+  &:hover {
+    filter: brightness(1.25);
+    cursor: pointer;
+  }
+  p {
+    color: black;
+    font-size: 4rem;
+  }
+}
